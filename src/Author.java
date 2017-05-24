@@ -4,7 +4,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Author extends Person {
+     
     private List books;
 
     public Author(String firstName, String lastName) {
@@ -16,15 +18,15 @@ public class Author extends Person {
      * @deprecated Use addBook instead
      */
     @Deprecated
-    @SuppressWarnings("deprecation")
+    @SuppressWarnings({"deprecation", "unchecked"})
     public List<String> getBooks() {
         return books;
     }
-    
+    @SuppressWarnings({"deprecation", "unchecked"})
     public List<String> publishedBooks() {
         return books;
     }
-    @SuppressWarnings("unchecked")  
+    @SuppressWarnings({"unchecked", "deprecation"})  
     public void addBook(String book) {
         books.add(book);
     }
